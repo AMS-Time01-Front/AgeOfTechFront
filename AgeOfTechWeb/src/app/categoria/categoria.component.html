@@ -1,0 +1,38 @@
+<!--comando para executar uma aplicação no angular é ng serve ou ng s-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h3>
+      <p>Todas as categorias</p>
+    </h3> -->
+
+    <main id="container">
+
+        <div *ngFor="let categoria of categories">
+          <div class="cat_containers">
+            <!-- {{categoria.id}} -->
+                      <!-- | -->
+            <span class="cat_span">{{categoria.descricao}}</span>
+            <div class="buttons">
+              <button class="delete">
+
+              </button>
+              <button class="changes">
+
+              </button>
+            </div>
+          </div>
+
+        </div>
+    </main>
+  </body>
+</html>
+
+
