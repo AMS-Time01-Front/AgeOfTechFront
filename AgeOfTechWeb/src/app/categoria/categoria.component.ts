@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpBackend, HttpClient, HttpClientModule} from '@angular/common/http';
+import { templateJitUrl } from '@angular/compiler';
 
 
 @Component({
@@ -21,5 +22,14 @@ export class CategoriaComponent implements OnInit {
       this.categories = response
       console.log(this.categories)
     });
+  }
+
+  novo(template : any){
+    this.openModal(template);
+    console.log('CLIQUEI NO BOTÃO')
+  }
+
+  openModal(template: any){
+    template.show();
   }
 }

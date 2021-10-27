@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import { UserLoginComponent } from './Usuario/user-login/user-login.component';
 import { UserCadastrarComponent } from './Usuario/user-cadastrar/user-cadastrar.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     UserLoginComponent,
     UserCadastrarComponent,
-    CategoriaComponent
-  ],
+    CategoriaComponent,
+      ProdutoComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

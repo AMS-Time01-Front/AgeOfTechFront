@@ -1,38 +1,43 @@
-<!--comando para executar uma aplicação no angular é ng serve ou ng s-->
+<h3>CATEGORIA DE PRODUTOS</h3>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- <h3>
-      <p>Todas as categorias</p>
-    </h3> -->
+<div class="d-flex">
+  <div class="form-inline mr-auto">
+    <div class="form-group mb-2">
+      <input type="text" class="form-control mr-2"
+      placeholder="Pesquisar">
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="novo(template)" >
+      NOVA
+    </button>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th class="">Código</th>
+        <th>Descrição</th>
+        <th>Opções</th>
+        <th>Ativar/Desativar</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="categories && categories.length">
+      <tr *ngFor="let categoria of categories">
+        <td class="text-center"> {{categoria.id}}</td>
+        <td class="text-center"> {{categoria.descricao}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal fade" bsModal #template="">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4>CADASTRAR CATEGORIA</h4>
+      <button type="button" class="close pull-right"  aria-label="Close"></button>
+    </div>
 
-    <main id="container">
+  </div>
 
-        <div *ngFor="let categoria of categories">
-          <div class="cat_containers">
-            <!-- {{categoria.id}} -->
-                      <!-- | -->
-            <span class="cat_span">{{categoria.descricao}}</span>
-            <div class="buttons">
-              <button class="delete">
-
-              </button>
-              <button class="changes">
-
-              </button>
-            </div>
-          </div>
-
-        </div>
-    </main>
-  </body>
-</html>
-
-
+</div>
