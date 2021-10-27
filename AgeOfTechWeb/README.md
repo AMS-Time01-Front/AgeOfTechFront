@@ -11,7 +11,7 @@ Esse é o projeto AgeOfTechFront.
 6 git branch -v
 7 git add . (ou git add <nome_do_artefato>)
 8 git commit -m "first commit"
-9 git push origin main
+9 git push origin (main ou master)
 
 ## Development server
 
